@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City IS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJS-dy-U9T">
+                                <rect key="frame" x="61" y="44" width="252" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="yJP-Md-9mP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="44"/>
+                                <color key="textColor" red="0.045677218120000002" green="1" blue="0.1078513618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick An Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="WqS-zD-iLe">
+                                <rect key="frame" x="76.5" y="158" width="222" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Z8k-Jv-TyE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedBold" family="American Typewriter" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.29598328569999999" blue="0.13839893640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wb-Dd-1Bj">
+                                <rect key="frame" x="0.0" y="376" width="375" height="162"/>
+                                <color key="backgroundColor" red="1" green="0.9956031473713356" blue="0.21870834615941215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="UF3-vH-xzt"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="baO-d6-VXZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JhJ-Ut-rUi"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9wb-Dd-1Bj" secondAttribute="bottom" constant="129" id="5Cx-Nf-bHh"/>
+                            <constraint firstItem="9wb-Dd-1Bj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7rn-zI-ZFv"/>
+                            <constraint firstItem="WqS-zD-iLe" firstAttribute="centerX" secondItem="9wb-Dd-1Bj" secondAttribute="centerX" id="8oq-J4-N4G"/>
+                            <constraint firstItem="AJS-dy-U9T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="Bc9-5m-KGr"/>
+                            <constraint firstItem="WqS-zD-iLe" firstAttribute="top" secondItem="AJS-dy-U9T" secondAttribute="bottom" constant="55" id="KYn-EJ-oHc"/>
+                            <constraint firstAttribute="trailing" secondItem="9wb-Dd-1Bj" secondAttribute="trailing" id="Ko2-IN-oGv"/>
+                            <constraint firstItem="AJS-dy-U9T" firstAttribute="centerX" secondItem="WqS-zD-iLe" secondAttribute="centerX" id="OeU-hH-QpF"/>
+                            <constraint firstItem="AJS-dy-U9T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="iPg-J5-xyN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="introLabel" destination="AJS-dy-U9T" id="Ihg-fv-ctw"/>
+                        <outlet property="pikerView" destination="9wb-Dd-1Bj" id="MBd-eW-q0R"/>
+                        <outlet property="soulLabel" destination="WqS-zD-iLe" id="zOQ-ZO-nuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="140"/>
+        </scene>
+    </scenes>
+</document>
